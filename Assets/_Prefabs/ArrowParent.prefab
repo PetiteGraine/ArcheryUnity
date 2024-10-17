@@ -155,8 +155,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8362636956233555048}
   - component: {fileID: 3927056561510242131}
-  - component: {fileID: 7213958548579291133}
-  - component: {fileID: 1813988905880121658}
   m_Layer: 6
   m_Name: ArrowParent
   m_TagString: Arrow
@@ -207,35 +205,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &7213958548579291133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726587074533708524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0fa9e889798c44aaa473e53a47ad51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3927056561510242131}
---- !u!114 &1813988905880121658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726587074533708524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753b40141bd682640a09e736b21e8f61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3927056561510242131}
-  myCollider: {fileID: 1983972373141097261}
-  stickingArrow: {fileID: 1721328653655675697, guid: b567897bcd36d394a862de17710960a3,
-    type: 3}
 --- !u!1001 &4545825367615972982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,7 +305,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 296517191285905765, guid: ae75179165c8e854fa9af578948a1009, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3042412393605614421, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}
@@ -347,12 +317,6 @@ PrefabInstance:
 --- !u!4 &1526392505844526371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3042412393605614421, guid: ae75179165c8e854fa9af578948a1009,
-    type: 3}
-  m_PrefabInstance: {fileID: 4545825367615972982}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1983972373141097261 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 2638678694783495515, guid: ae75179165c8e854fa9af578948a1009,
     type: 3}
   m_PrefabInstance: {fileID: 4545825367615972982}
   m_PrefabAsset: {fileID: 0}

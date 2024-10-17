@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2638678694783495515}
   - component: {fileID: 1918996417309383662}
   m_Layer: 6
-  m_Name: Arrow
+  m_Name: ArrowVisual
   m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2410271734309294575}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5358}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalPosition: {x: -0, y: 0.317, z: -0.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &2132184384387990768
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63,10 +63,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de607d7385c79154a9793d942bb33d80, type: 2}
-  - {fileID: 2100000, guid: 39381ec0d570b8c46b8c634a5a138c53, type: 2}
-  - {fileID: 2100000, guid: 71f3ae50a00698f4581c590912e9e838, type: 2}
-  - {fileID: 2100000, guid: 71f3ae50a00698f4581c590912e9e838, type: 2}
+  - {fileID: 2100000, guid: 1b1c6772ca7a8ba4aae5678a9ba19d3e, type: 2}
+  - {fileID: 2100000, guid: 96217803444a92240a3df374a035e5b6, type: 2}
+  - {fileID: 2100000, guid: fefaa0be131c4b242a4638698962f9a3, type: 2}
+  - {fileID: 2100000, guid: 75c5b0515e1a6e24e95f052f32583e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
