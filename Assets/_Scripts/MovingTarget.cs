@@ -2,69 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingTarget : MonoBehaviour, IHittable
+public class MovingTarget : MonoBehaviour
 {
-    private Rigidbody rb;
-    private bool stopped = false;
-
-    private Vector3 nextposition;
-    private Vector3 originPosition;
-
-    [SerializeField]
-    private int health = 1;
+    public Vector3 spawnPosition;
+    public Vector3 spawnArea;
+    public GameObject target;
 
     [SerializeField]
     private AudioSource audioSource;
 
-    [SerializeField]
-    private float arriveThreshold, movementRadius = 2, speed = 1;
-
-    private void Awake()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        originPosition = transform.position;
-        nextposition = GetNewMovementPosition();
-    }
-
-    private Vector3 GetNewMovementPosition()
-    {
-        return originPosition + (Vector3)Random.insideUnitCircle * movementRadius;
+        gameObject.transform.position = spawnPosition + new Vector3(Random.Range(-spawnArea.x, spawnArea.x), Random.Range(-spawnArea.y, spawnArea.y), Random.Range(-spawnArea.z, spawnArea.z));
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((rb.isKinematic || collision.gameObject.CompareTag("Arrow")) == false)
+        if (collision.gameObject.CompareTag("Arrow"))
         {
-            audioSource.Play();
+            audioSource.PlayOneShot(audioSource.clip, 1f);
+            Destroy(collision.gameObject);
+            Instantiate(target);
+            Destroy(gameObject);
         }
     }
-
-    public void GetHit()
-    {
-        health--;
-        if(health <= 0)
-        {
-            rb.isKinematic = false;
-            stopped = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (stopped == false)
-        {
-            if(Vector3.Distance(transform.position,nextposition) < arriveThreshold)
-            {
-                nextposition = GetNewMovementPosition();
-            }
-
-            Vector3 direction = nextposition - transform.position;
-            rb.MovePosition(transform.position + direction.normalized * Time.fixedDeltaTime * speed);
-        }
-    }
-}
-
-public interface IHittable
-{
-    void GetHit();
 }
