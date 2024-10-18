@@ -102,6 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 4272576829133719327, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8, type: 3}
   target: {fileID: 606455407165080763}
+  speed: 3
+  timeChasingPosMin: 0.5
+  timeChasingPosMax: 2
   audioSource: {fileID: 2497732441978904446}
 --- !u!64 &8315441102673386276
 MeshCollider:
