@@ -2,36 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameStartMenu : MonoBehaviour
 {
     [Header("UI Pages")]
     public GameObject mainMenu;
+    public GameObject MenuLevel;
 
 
-    [Header("Main Menu Buttons")]
-    public Button JouerButton;
-    public Button EntrainementButton;
-    public Button ScoreButton;
-    public Button QuitterButton;
 
     public List<Button> returnButtons;
 
     // Start is called before the first frame update
     void Start()
     {
-        EnableMainMenu();
-
-        //Hook events
-        JouerButton.onClick.AddListener(StartGame);
-        EntrainementButton.onClick.AddListener(EnableOption);
-        ScoreButton.onClick.AddListener(EnableAbout);
-        QuitterButton.onClick.AddListener(QuitGame);
-
-        foreach (var item in returnButtons)
-        {
-            item.onClick.AddListener(EnableMainMenu);
-        }
     }
 
     public void QuitGame()
@@ -42,6 +28,9 @@ public class GameStartMenu : MonoBehaviour
     public void StartGame()
     {
         HideAll();
+        mainMenu.SetActive(false);
+        MenuLevel.SetActive(true);
+
     }
 
     public void HideAll()
@@ -54,15 +43,45 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
 
+
+
     }
-    public void EnableOption()
+    public void EnableTraining()
+    {
+        mainMenu.SetActive(false);
+        SceneManager.LoadScene("ArcheryScene");
+
+    }
+    public void EnableScore()
     {
         mainMenu.SetActive(false);
 
     }
-    public void EnableAbout()
-    {
-        mainMenu.SetActive(false);
 
+    public void EnableBack()
+    {
+        MenuLevel.SetActive(false);
+        mainMenu.SetActive(true);
+
+    }
+
+    public void EnableEasy() 
+    { 
+
+    }
+
+    public void EnableMedium()
+    {
+
+    }
+
+    public void EnableHigh() 
+    {
+
+    }
+
+    public void EnableCompetition()
+    {
+        
     }
 }
