@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe843aa0bd5adf4bb6878c9a0b00da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPosition: {x: 0, y: 1, z: 3}
-  spawnArea: {x: 5, y: 0.5, z: 2}
+  spawner: {fileID: 4272576829133719327, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8, type: 3}
   target: {fileID: 606455407165080763}
   audioSource: {fileID: 2497732441978904446}
 --- !u!64 &8315441102673386276

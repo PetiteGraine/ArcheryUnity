@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MovingTarget : MonoBehaviour
 {
-    public Vector3 spawnPosition;
-    public Vector3 spawnArea;
+    public GameObject spawner;
     public GameObject target;
 
     [SerializeField]
@@ -13,7 +12,12 @@ public class MovingTarget : MonoBehaviour
 
     private void Start()
     {
-        gameObject.transform.position = spawnPosition + new Vector3(Random.Range(-spawnArea.x, spawnArea.x), Random.Range(-spawnArea.y, spawnArea.y), Random.Range(-spawnArea.z, spawnArea.z));
+        float machin = gameObject.transform.localScale.x * (1.15f / 8);
+        float x = spawner.transform.localScale.x / 2 - machin;
+        float y = spawner.transform.localScale.y / 2 - machin;
+        float z = spawner.transform.localScale.z / 2;
+        gameObject.transform.position = spawner.transform.position + new Vector3(Random.Range(-x, x), Random.Range(-y, y), Random.Range(-z, z));
+
     }
 
     private void OnCollisionEnter(Collision collision)
