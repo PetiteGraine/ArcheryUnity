@@ -6,6 +6,7 @@ public class MovingTarget : MonoBehaviour
 {
     public GameObject spawner;
     public GameObject target;
+    public float startSize = 6;
     public float speed = 3;
     public float timeChasingPosMin;
     public float timeChasingPosMax;
@@ -14,23 +15,19 @@ public class MovingTarget : MonoBehaviour
     private Vector3 newPos;
     private Vector3 pos1;
     private Vector3 pos2;
-
     [SerializeField]
-    private AudioSource audioSource;
+    private GameObject soundEffect;
 
-
-    private void Awake()
+    private void Start()
     {
+        Vector3 sizeVector = new Vector3(startSize, startSize, startSize);
+        transform.localScale = sizeVector;
         float machin = transform.localScale.x * (1.15f / 8);
         float x = spawner.transform.localScale.x / 2 - machin;
         float y = spawner.transform.localScale.y / 2 - machin;
         float z = spawner.transform.localScale.z / 2;
         transform.position = spawner.transform.position + new Vector3(Random.Range(-x, x), Random.Range(-y, y), Random.Range(-z, z));
         timeChasingPos = Random.Range(timeChasingPosMin, timeChasingPosMax);
-    }
-
-    private void Start()
-    {
         pos1 = new Vector3(-spawner.transform.localScale.x / 2, transform.position.y, transform.position.z);
         pos2 = new Vector3(spawner.transform.localScale.x / 2, transform.position.y, transform.position.z);
         if (Random.Range(0, 1) == 1)
@@ -49,12 +46,12 @@ public class MovingTarget : MonoBehaviour
             timePassed = 0f;
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
-            audioSource.PlayOneShot(audioSource.clip, 1f);
+            GameObject spawnedEffect = Instantiate(soundEffect);
+            spawnedEffect.transform.position = gameObject.transform.position;
             Destroy(collision.gameObject);
             Instantiate(target);
             Destroy(gameObject);
