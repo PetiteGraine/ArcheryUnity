@@ -8,7 +8,7 @@ public class ArrowController : MonoBehaviour
     private GameObject midPointVisual, arrowPrefab, arrowSpawnPoint;
 
     [SerializeField]
-    private float arrowMaxSpeed = 10;
+    private float arrowMaxSpeed = 15;
 
     [SerializeField]
     private AudioSource bowReleaseAudioSource;

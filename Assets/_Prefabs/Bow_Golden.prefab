@@ -1003,7 +1003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9180855954762445893}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000009636813, y: 0.38268322, z: -0.000000039916966, w: 0.9238797}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0.634, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
       - m_Target: {fileID: 6490818579716919419}
         m_TargetAssemblyTypeName: ArrowController, Assembly-CSharp
         m_MethodName: ReleaseArrow
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 6726587074533708524, guid: 6850c6ad5c870e34fb40ad5f7af67306,
     type: 3}
   arrowSpawnPoint: {fileID: 5888717115644351725}
-  arrowMaxSpeed: 10
+  arrowMaxSpeed: 5
   bowReleaseAudioSource: {fileID: 5979352975622487226}
 --- !u!1001 &8597761639701143085
 PrefabInstance:

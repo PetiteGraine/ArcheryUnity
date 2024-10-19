@@ -346,6 +346,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490818579716919419, guid: b7c86e1e189862340a094bbf96431233,
+        type: 3}
+      propertyPath: arrowMaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9180855954762445893, guid: b7c86e1e189862340a094bbf96431233,
         type: 3}
       propertyPath: m_Name
@@ -1322,6 +1327,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490818579716919419, guid: d92c11c15d47af04db65bc8bc03b5150,
+        type: 3}
+      propertyPath: arrowMaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9180855954762445893, guid: d92c11c15d47af04db65bc8bc03b5150,
         type: 3}
       propertyPath: m_Name
@@ -1875,7 +1885,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 4, y: 1, z: 2}
+  m_LocalScale: {x: 6, y: 1, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 406701641}
@@ -2502,8 +2512,8 @@ Transform:
   m_GameObject: {fileID: 1487880985}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 5.25}
-  m_LocalScale: {x: 40, y: 5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2.5, z: 25}
+  m_LocalScale: {x: 60, y: 5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 406701641}
@@ -3117,7 +3127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 0}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 3
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -3930,12 +3940,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 880115582633363114, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 5821720907437102258, guid: 5a876abf66661b746b9d65d62e883c9f,
-        type: 3}
     - target: {fileID: 2934289346468513560, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3986,20 +3990,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3944468296565376344, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
+    - target: {fileID: 6490818579716919419, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
         type: 3}
-      propertyPath: OnBowReleased.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3944468296565376344, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
-        type: 3}
-      propertyPath: OnBowReleased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReleaseArrow
-      objectReference: {fileID: 0}
-    - target: {fileID: 9115239119919828999, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: arrowMaxSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9180855954762445893, guid: 9d81f7ea3a2d50742bde5e63f1e61ce0,
         type: 3}
@@ -4026,6 +4020,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255639858842510443, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255639858842510443, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4037,7 +4036,7 @@ PrefabInstance:
     - target: {fileID: 5255639858842510443, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 19.75
       objectReference: {fileID: 0}
     - target: {fileID: 5255639858842510443, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8,
         type: 3}
