@@ -1345,7 +1345,7 @@ PrefabInstance:
     - target: {fileID: 2410271734309294575, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}
       propertyPath: m_Name
-      value: Arrow
+      value: ArrowWooden
       objectReference: {fileID: 0}
     - target: {fileID: 3042412393605614421, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}

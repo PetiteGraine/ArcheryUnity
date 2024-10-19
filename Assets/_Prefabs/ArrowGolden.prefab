@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2638678694783495515}
   - component: {fileID: 1918996417309383662}
   m_Layer: 6
-  m_Name: Arrow
+  m_Name: ArrowGolden
   m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,10 +63,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de607d7385c79154a9793d942bb33d80, type: 2}
-  - {fileID: 2100000, guid: 39381ec0d570b8c46b8c634a5a138c53, type: 2}
-  - {fileID: 2100000, guid: 71f3ae50a00698f4581c590912e9e838, type: 2}
-  - {fileID: 2100000, guid: 71f3ae50a00698f4581c590912e9e838, type: 2}
+  - {fileID: 2100000, guid: 1b1c6772ca7a8ba4aae5678a9ba19d3e, type: 2}
+  - {fileID: -905690159841262435, guid: c6ffd08c6909c764198419a5bd0ac3ed, type: 3}
+  - {fileID: 2100000, guid: fefaa0be131c4b242a4638698962f9a3, type: 2}
+  - {fileID: 2100000, guid: 75c5b0515e1a6e24e95f052f32583e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,7 +126,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.014782758, y: 0.5047096, z: 0.012264665}
   m_Center: {x: 0.0000911057, y: -0.25235513, z: 1.4185467e-12}
