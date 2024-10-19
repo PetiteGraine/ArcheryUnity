@@ -6,20 +6,20 @@ public class MovingTarget : MonoBehaviour
 {
     public GameObject spawner;
     public GameObject target;
-    public float startSize = 6;
-    public float speed = 3;
-    public float timeChasingPosMin;
-    public float timeChasingPosMax;
+    public float startSize = 10;
+    public float speed = 2;
+    public float timeChasingPosMin = 1;
+    public float timeChasingPosMax = 3;
     private float timePassed = 0;
     private float timeChasingPos;
     private Vector3 newPos;
     private Vector3 pos1;
     private Vector3 pos2;
-    [SerializeField]
-    private GameObject soundEffect;
+    [SerializeField] private GameObject soundEffect;
 
     private void Start()
     {
+        SetGameMode();
         Vector3 sizeVector = new Vector3(startSize, startSize, startSize);
         transform.localScale = sizeVector;
         float machin = transform.localScale.x * (1.15f / 8);
@@ -69,5 +69,58 @@ public class MovingTarget : MonoBehaviour
             newPos = pos2;
         else
             newPos = pos1;
+    }
+
+    private void SetGameMode()
+    {
+
+        switch (PlayerPrefs.GetString("mode"))
+        {
+            case "easy":
+                SetEasyMode();
+                break;
+            case "medium":
+                SetMediumMode();
+                break;
+            case "hard":
+                SetHardMode();
+                break;
+            case "training":
+                SetTrainingMode();
+                break;
+            default:
+                SetTrainingMode();
+                break;
+        }
+    }
+
+    private void SetTrainingMode()
+    {
+        startSize = 10;
+        speed = 0;
+    }
+
+    private void SetEasyMode()
+    {
+        startSize = 10;
+        speed = 2;
+        timeChasingPosMin = 1;
+        timeChasingPosMax = 3;
+    }
+
+    private void SetMediumMode()
+    {
+        startSize = 8;
+        speed = 3;
+        timeChasingPosMin = 0.5f;
+        timeChasingPosMax = 2;
+    }
+
+    private void SetHardMode()
+    {
+        startSize = 6;
+        speed = 4;
+        timeChasingPosMin = 0.3f;
+        timeChasingPosMax = 1.5f;
     }
 }
