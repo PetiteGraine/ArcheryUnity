@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovingTarget : MonoBehaviour
 {
     public GameObject spawner;
-    public GameObject target;
     public float startSize = 10;
     public float speed = 2;
     public float timeChasingPosMin = 1;
@@ -15,7 +14,7 @@ public class MovingTarget : MonoBehaviour
     private Vector3 newPos;
     private Vector3 pos1;
     private Vector3 pos2;
-    [SerializeField] private GameObject soundEffect;
+
 
     private void Start()
     {
@@ -46,18 +45,6 @@ public class MovingTarget : MonoBehaviour
             timePassed = 0f;
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Arrow"))
-        {
-            GameObject spawnedEffect = Instantiate(soundEffect);
-            spawnedEffect.transform.position = gameObject.transform.position;
-            Destroy(collision.gameObject);
-            Instantiate(target);
-            Destroy(gameObject);
-        }
-    }
-
     private void MoveUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);

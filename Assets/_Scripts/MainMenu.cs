@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     private void LoadGame()
     {
-        SceneManager.LoadScene("ArcheryScene");
+        SceneManager.LoadScene("Archery");
     }
 
     public void DisplayScoreMenu()
