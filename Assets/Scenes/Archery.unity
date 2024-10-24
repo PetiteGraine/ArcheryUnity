@@ -5818,7 +5818,7 @@ MonoBehaviour:
   rayHands: {fileID: 1168666635}
   endCanvas: {fileID: 1283211365}
   continuousMove: {fileID: 1701807435}
-  remainingTime: 20
+  remainingTime: 40
 --- !u!1001 &1630377502
 PrefabInstance:
   m_ObjectHideFlags: 0
