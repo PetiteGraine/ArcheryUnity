@@ -424,7 +424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &838895029679931162
 Transform:
   m_ObjectHideFlags: 0
@@ -988,13 +988,14 @@ GameObject:
   - component: {fileID: 2162572355036549611}
   - component: {fileID: 3944468296565376344}
   - component: {fileID: 6490818579716919419}
+  - component: {fileID: 3646593580552276347}
   m_Layer: 3
   m_Name: Bow_Evil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2934289346468513560
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,8 +1333,22 @@ MonoBehaviour:
   arrowPrefab: {fileID: 6726587074533708524, guid: 99857ed2789cb9c4cb31126b2decf64b,
     type: 3}
   arrowSpawnPoint: {fileID: 5888717115644351725}
-  arrowMaxSpeed: 5
+  arrowMaxSpeed: 10
   bowReleaseAudioSource: {fileID: 5979352975622487226}
+--- !u!114 &3646593580552276347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180855954762445893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f30d003842afa4b94c0d60286857dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0.5, z: -7}
+  rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
 --- !u!1001 &8597761639701143085
 PrefabInstance:
   m_ObjectHideFlags: 0

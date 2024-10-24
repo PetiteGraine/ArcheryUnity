@@ -424,7 +424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &838895029679931162
 Transform:
   m_ObjectHideFlags: 0
@@ -988,6 +988,7 @@ GameObject:
   - component: {fileID: 3944468296565376344}
   - component: {fileID: 6490818579716919419}
   - component: {fileID: 1040951021224485962}
+  - component: {fileID: 8417294724418156205}
   m_Layer: 3
   m_Name: Bow_Wooden
   m_TagString: Untagged
@@ -1334,6 +1335,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8417294724418156205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180855954762445893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f30d003842afa4b94c0d60286857dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: -1, y: 0.8, z: -7}
+  rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
 --- !u!1001 &8597761639701143085
 PrefabInstance:
   m_ObjectHideFlags: 0
