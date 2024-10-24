@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class MainMenu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [Header("UI Pages")]
     public GameObject mainMenu;
@@ -13,11 +13,6 @@ public class MainMenu : MonoBehaviour
     private void LoadGame()
     {
         SceneManager.LoadScene("Archery");
-    }
-
-    public void DisplayScoreMenu()
-    {
-        mainMenu.SetActive(false);
     }
 
     public void QuitGame()
@@ -32,7 +27,7 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void BackToMenu(GameObject currentCanvas)
+    public void BackToMainMenu(GameObject currentCanvas)
     {
         currentCanvas.SetActive(false);
         mainMenu.SetActive(true);

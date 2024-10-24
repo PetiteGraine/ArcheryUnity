@@ -76,6 +76,7 @@ public class MovingTarget : MonoBehaviour
                 SetTrainingMode();
                 break;
             default:
+                PlayerPrefs.SetString("mode", "training");
                 SetTrainingMode();
                 break;
         }

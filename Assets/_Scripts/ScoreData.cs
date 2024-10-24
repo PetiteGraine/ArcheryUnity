@@ -37,3 +37,9 @@ public class ScoreData
         this.date = date;
     }
 }
+
+[Serializable]
+public class ScoreDataList
+{
+    public ScoreData[] Items;
+}

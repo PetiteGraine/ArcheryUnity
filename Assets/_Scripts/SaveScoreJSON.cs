@@ -50,6 +50,23 @@ public static class SaveScoreJSON
 
     }
 
+    public static ScoreData[] ReadFromJSONToListString(string filename)
+    {
+        string content = ReadFile(GetPath(filename));
+        Debug.Log(GetPath(filename));
+        Debug.Log("Contenu JSON : " + content);
+
+        if (string.IsNullOrEmpty(content) || content == "{}")
+        {
+            return null;
+        }
+
+        ScoreDataList scoreDataList = JsonUtility.FromJson<ScoreDataList>(content);
+        return scoreDataList.Items;
+    }
+
+
+
     private static string GetPath(string filename)
     {
         return Application.persistentDataPath + "/" + filename;
