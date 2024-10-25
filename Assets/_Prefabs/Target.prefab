@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9979e2a84421bc49be7e305edf155f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Points: 10
-  Target: {fileID: 0}
-  _soundEffect: {fileID: 0}
+  Points: 30
+  Target: {fileID: 606455407165080763}
+  _soundEffect: {fileID: 3053992710300106563, guid: 026f22aedad870c4385e1f4ef15807b4,
+    type: 3}
