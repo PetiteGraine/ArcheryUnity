@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour
     public ActionBasedContinuousMoveProvider continuousMove;
     private TimeSpan timePlaying;
     private bool timerGoing;
-    public float remainingTime = 20;
+    public float remainingTime = 40;
     private List<ScoreData> entries = new List<ScoreData>();
     private string filename = "ScoresData.json";
 
@@ -67,9 +67,12 @@ public class Manager : MonoBehaviour
 
     private void BeginTimer()
     {
-        timerGoing = true;
+        if (PlayerPrefs.GetString("mode") != "training")
+        {
+            timerGoing = true;
 
-        StartCoroutine(UpdateTimer());
+            StartCoroutine(UpdateTimer());
+        }
     }
 
     public void EndTimer()
