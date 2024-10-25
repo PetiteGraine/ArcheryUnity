@@ -15,6 +15,8 @@ public class DestroyTarget : MonoBehaviour
             Manager.Instance.UpdateScore(Points);
             Destroy(collision.gameObject);
             Instantiate(Target);
+            if (gameObject.transform.parent != null)
+            Destroy(gameObject.transform.parent.gameObject);
             Destroy(gameObject);
         }
     }
