@@ -5804,21 +5804,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385860ebe6208ee4ea0b2874958020f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1701807431}
+  Player: {fileID: 1701807431}
   endPlayerPosition: {fileID: 360096254}
-  scoreText: {fileID: 887641556}
-  timeText: {fileID: 1096197672}
-  finalScoreText: {fileID: 50908003}
-  nameInputField: {fileID: 1489889476}
-  bowTier1: {fileID: 182881382}
-  bowTier2: {fileID: 676854129}
-  bowTier3: {fileID: 870095674256891501}
-  score: 0
-  directHands: {fileID: 1260879369}
-  rayHands: {fileID: 1168666635}
-  endCanvas: {fileID: 1283211365}
-  continuousMove: {fileID: 1701807435}
-  remainingTime: 40
+  ScoreText: {fileID: 887641556}
+  TimeText: {fileID: 1096197672}
+  FinalScoreText: {fileID: 50908003}
+  NameInputField: {fileID: 1489889476}
+  BowTier1: {fileID: 182881382}
+  BowTier2: {fileID: 676854129}
+  BowTier3: {fileID: 870095674256891501}
+  Score: 0
+  DirectHands: {fileID: 1260879369}
+  RayHands: {fileID: 1168666635}
+  EndCanvas: {fileID: 1283211365}
+  ContinuousMove: {fileID: 1701807435}
+  RemainingTime: 40
 --- !u!1001 &1630377502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7935,6 +7935,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7337115351226534180, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 606455407165080763, guid: 7fd0147ec4c090d43935a8d7f51b2e36,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

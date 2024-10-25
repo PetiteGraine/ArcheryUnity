@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour
 {
-    public int pointgagne = 10;
-    public GameObject target;
-    [SerializeField] private GameObject soundEffect;
+    public int Points = 10;
+    public GameObject Target;
+    [SerializeField] private GameObject _soundEffect;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
-            GameObject spawnedEffect = Instantiate(soundEffect);
+            GameObject spawnedEffect = Instantiate(_soundEffect);
             spawnedEffect.transform.position = gameObject.transform.position;
-            Manager.instance.UpdateScore(pointgagne);
+            Manager.Instance.UpdateScore(Points);
             Destroy(collision.gameObject);
-            Instantiate(target);
+            Instantiate(Target);
             Destroy(gameObject);
         }
     }

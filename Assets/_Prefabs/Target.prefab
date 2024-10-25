@@ -123,11 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe843aa0bd5adf4bb6878c9a0b00da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 4272576829133719327, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8, type: 3}
-  startSize: 10
-  speed: 2
-  timeChasingPosMin: 1
-  timeChasingPosMax: 3
+  Spawner: {fileID: 4272576829133719327, guid: 7e3c10e5fa9089440a8ca9e9af2ab0a8, type: 3}
+  StartSize: 10
+  Speed: 2
+  TimeChasingPosMin: 1
+  TimeChasingPosMax: 3
 --- !u!114 &6094799029779387899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9979e2a84421bc49be7e305edf155f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointgagne: 10
-  target: {fileID: 606455407165080763}
-  soundEffect: {fileID: 3053992710300106563, guid: 026f22aedad870c4385e1f4ef15807b4,
+  Points: 10
+  Target: {fileID: 606455407165080763}
+  _soundEffect: {fileID: 3053992710300106563, guid: 026f22aedad870c4385e1f4ef15807b4,
     type: 3}
 --- !u!1 &4939347264812989262
 GameObject:
@@ -212,7 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9979e2a84421bc49be7e305edf155f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointgagne: 40
-  target: {fileID: 606455407165080763}
-  soundEffect: {fileID: 3053992710300106563, guid: 026f22aedad870c4385e1f4ef15807b4,
-    type: 3}
+  Points: 10
+  Target: {fileID: 0}
+  _soundEffect: {fileID: 0}

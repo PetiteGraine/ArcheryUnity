@@ -1,133 +1,100 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class BowStringController : MonoBehaviour
 {
-    [SerializeField]
-    private BowString bowStringRenderer;
-
-    private XRGrabInteractable interactable;
-
-    [SerializeField]
-    private Transform midPointGrabObject, midPointVisualObject, midPointParent;
-
-    [SerializeField]
-    private float bowStringStretchLimit = 0.3f;
-
-    private Transform interactor;
-
-    private float strength, previousStrength;
-
-    [SerializeField]
-    private float stringSoundThreshold = 0.001f;
-
-    [SerializeField]
-    private AudioSource audioSource;
-
+    [SerializeField] private BowString _bowStringRenderer;
+    private XRGrabInteractable _interactable;
+    [SerializeField] private Transform _midPointGrabObject, _midPointVisualObject, _midPointParent;
+    [SerializeField] private float _bowStringStretchLimit = 0.3f;
+    private Transform _interactor;
+    private float _strength, _previousStrength;
+    [SerializeField] private float _stringSoundThreshold = 0.001f;
+    [SerializeField] private AudioSource _audioSource;
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
 
     private void Awake()
     {
-        interactable = midPointGrabObject.GetComponent<XRGrabInteractable>();
+        _interactable = _midPointGrabObject.GetComponent<XRGrabInteractable>();
     }
 
     private void Start()
     {
-        interactable.selectEntered.AddListener(PrepareBowString);
-        interactable.selectExited.AddListener(ResetBowString);
+        _interactable.selectEntered.AddListener(PrepareBowString);
+        _interactable.selectExited.AddListener(ResetBowString);
     }
 
     private void ResetBowString(SelectExitEventArgs arg0)
     {
-        OnBowReleased?.Invoke(strength);
-        strength = 0;
-        previousStrength = 0;
-        audioSource.pitch = 1;
-        audioSource.Stop();
+        OnBowReleased?.Invoke(_strength);
+        _strength = 0;
+        _previousStrength = 0;
+        _audioSource.pitch = 1;
+        _audioSource.Stop();
 
-
-        interactor = null;
-        midPointGrabObject.localPosition = Vector3.zero;
-        midPointVisualObject.localPosition = Vector3.zero;
-        bowStringRenderer.CreateString(null);
-
+        _interactor = null;
+        _midPointGrabObject.localPosition = Vector3.zero;
+        _midPointVisualObject.localPosition = Vector3.zero;
+        _bowStringRenderer.CreateString(null);
     }
 
     private void PrepareBowString(SelectEnterEventArgs arg0)
     {
-        interactor = arg0.interactorObject.transform;
+        _interactor = arg0.interactorObject.transform;
         OnBowPulled?.Invoke();
     }
 
     private void Update()
     {
-        if (interactor != null)
+        if (_interactor != null)
         {
-            //convert bow string mid point position to the local space of the MidPoint
             Vector3 midPointLocalSpace =
-                midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
+                _midPointParent.InverseTransformPoint(_midPointGrabObject.position); // localPosition
 
-            //get the offset
             float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
-
-
-            previousStrength = strength;
-
+            _previousStrength = _strength;
             HandleStringPushedBackToStart(midPointLocalSpace);
-
             HandleStringPulledBackTolimit(midPointLocalZAbs, midPointLocalSpace);
-
             HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
-
-            bowStringRenderer.CreateString(midPointVisualObject.position);
+            _bowStringRenderer.CreateString(_midPointVisualObject.position);
         }
     }
 
     private void HandlePullingString(float midPointLocalZAbs, Vector3 midPointLocalSpace)
     {
-        //what happens when we are between point 0 and the string pull limit
-        if (midPointLocalSpace.z < 0 && midPointLocalZAbs < bowStringStretchLimit)
+        if (midPointLocalSpace.z < 0 && midPointLocalZAbs < _bowStringStretchLimit)
         {
-            if (audioSource.isPlaying == false && strength <= 0.01f)
+            if (_audioSource.isPlaying == false && _strength <= 0.01f)
             {
-                audioSource.Play();
+                _audioSource.Play();
             }
 
-            strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
-            midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
-
+            _strength = Remap(midPointLocalZAbs, 0, _bowStringStretchLimit, 0, 1);
+            _midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
             PlayStringPullinSound();
         }
     }
 
     private void PlayStringPullinSound()
     {
-        //Check if we have moved the string enought to play the sound unpause it
-        if (Mathf.Abs(strength - previousStrength) > stringSoundThreshold)
+        if (Mathf.Abs(_strength - _previousStrength) > _stringSoundThreshold)
         {
-            if (strength < previousStrength)
+            if (_strength < _previousStrength)
             {
-                //Play string sound in reverse if we are pusing the string towards the bow
-                audioSource.pitch = -1;
+                _audioSource.pitch = -1;
             }
             else
             {
-                //Play the sound normally
-                audioSource.pitch = 1;
+                _audioSource.pitch = 1;
             }
-            audioSource.UnPause();
+            _audioSource.UnPause();
         }
         else
         {
-            //if we stop moving Pause the sounds
-            audioSource.Pause();
+            _audioSource.Pause();
         }
-
     }
 
     private float Remap(float value, int fromMin, float fromMax, int toMin, int toMax)
@@ -137,13 +104,11 @@ public class BowStringController : MonoBehaviour
 
     private void HandleStringPulledBackTolimit(float midPointLocalZAbs, Vector3 midPointLocalSpace)
     {
-        //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
-        if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
+        if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= _bowStringStretchLimit)
         {
-            audioSource.Pause();
-            strength = 1;
-            //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
-            midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
+            _audioSource.Pause();
+            _strength = 1;
+            _midPointVisualObject.localPosition = new Vector3(0, 0, -_bowStringStretchLimit);
         }
     }
 
@@ -151,10 +116,10 @@ public class BowStringController : MonoBehaviour
     {
         if (midPointLocalSpace.z >= 0)
         {
-            audioSource.pitch = 1;
-            audioSource.Stop();
-            strength = 0;
-            midPointVisualObject.localPosition = Vector3.zero;
+            _audioSource.pitch = 1;
+            _audioSource.Stop();
+            _strength = 0;
+            _midPointVisualObject.localPosition = Vector3.zero;
         }
     }
 }

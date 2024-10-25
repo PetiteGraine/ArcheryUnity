@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 
 public class MenuManager : MonoBehaviour
 {
     [Header("UI Pages")]
-    public GameObject mainMenu;
+    public GameObject MainMenu;
 
     private void LoadGame()
     {
@@ -22,15 +18,14 @@ public class MenuManager : MonoBehaviour
 
     public void DisplayMenu(GameObject canvasShowed)
     {
-        mainMenu.SetActive(false);
+        MainMenu.SetActive(false);
         canvasShowed.SetActive(true);
-
     }
 
     public void BackToMainMenu(GameObject currentCanvas)
     {
         currentCanvas.SetActive(false);
-        mainMenu.SetActive(true);
+        MainMenu.SetActive(true);
     }
 
     public void StartEasyMode()

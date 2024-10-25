@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ec33c08328af14b8ea9c350490e206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endpoint_1: {fileID: 6123725351945377945}
-  endpoint_2: {fileID: 6778910904022292998}
+  _endpoint_1: {fileID: 6123725351945377945}
+  _endpoint_2: {fileID: 6778910904022292998}
 --- !u!1 &2010801155467010526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,13 +1237,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90561b9d89a7aea45845077e4682c002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bowStringRenderer: {fileID: 1551910536498250536}
-  midPointGrabObject: {fileID: 5650734219233722914}
-  midPointVisualObject: {fileID: 5317140110441866734}
-  midPointParent: {fileID: 6614646022657938839}
-  bowStringStretchLimit: 0.3
-  stringSoundThreshold: 0.001
-  audioSource: {fileID: 2159044091923907432}
+  _bowStringRenderer: {fileID: 1551910536498250536}
+  _midPointGrabObject: {fileID: 5650734219233722914}
+  _midPointVisualObject: {fileID: 5317140110441866734}
+  _midPointParent: {fileID: 6614646022657938839}
+  _bowStringStretchLimit: 0.3
+  _stringSoundThreshold: 0.001
+  _audioSource: {fileID: 2159044091923907432}
   OnBowPulled:
     m_PersistentCalls:
       m_Calls:
@@ -1286,12 +1286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab6338f8f656a94897ef9fe24556826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  midPointVisual: {fileID: 9115239119919828999}
-  arrowPrefab: {fileID: 6726587074533708524, guid: 6850c6ad5c870e34fb40ad5f7af67306,
+  _midPointVisual: {fileID: 9115239119919828999}
+  _arrowPrefab: {fileID: 6726587074533708524, guid: 6850c6ad5c870e34fb40ad5f7af67306,
     type: 3}
-  arrowSpawnPoint: {fileID: 5888717115644351725}
-  arrowMaxSpeed: 5
-  bowReleaseAudioSource: {fileID: 5979352975622487226}
+  _arrowSpawnPoint: {fileID: 5888717115644351725}
+  _arrowMaxSpeed: 15
+  _bowReleaseAudioSource: {fileID: 0}
 --- !u!23 &1040951021224485962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1347,8 +1347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f30d003842afa4b94c0d60286857dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: -1, y: 0.8, z: -7}
-  rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+  Position: {x: 0, y: 0, z: 0}
+  Rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &8597761639701143085
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BowTeleportIfGrounded : MonoBehaviour
 {
-    public Vector3 position;
-    public Quaternion rotation;
+    public Vector3 Position;
+    public Quaternion Rotation;
 
     private void LateUpdate()
     {
         if (gameObject.transform.position.y <= 0.25f)
         {
-            gameObject.transform.position = position;
-            gameObject.transform.rotation = rotation;
+            gameObject.transform.position = Position;
+            gameObject.transform.rotation = Rotation;
         }
     }
 }

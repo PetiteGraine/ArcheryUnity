@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d656bdfdfde55d4db80c3c1cd0fd1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreElementPrefab: {fileID: 4495770270242558529, guid: 42e45f3e55e01d74084d19a688b386ed,
+  ScoreElementPrefab: {fileID: 4495770270242558529, guid: 42e45f3e55e01d74084d19a688b386ed,
     type: 3}
 --- !u!1001 &320868285
 PrefabInstance:
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2db0e7722864cf4d9aac21b04372920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 980884662}
+  MainMenu: {fileID: 980884662}
 --- !u!114 &337071443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,8 +1438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde1322e84b15b4d9119f5fb325af3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myMixer: {fileID: 24100000, guid: 32f52f8a9c53ff040b67f16efa999816, type: 2}
-  musicSlider: {fileID: 966868943}
+  _myMixer: {fileID: 24100000, guid: 32f52f8a9c53ff040b67f16efa999816, type: 2}
+  _musicSlider: {fileID: 966868943}
 --- !u!1 &389992537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2db0e7722864cf4d9aac21b04372920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 980884662}
+  MainMenu: {fileID: 980884662}
 --- !u!222 &446692383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6412,7 +6412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2db0e7722864cf4d9aac21b04372920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 980884662}
+  MainMenu: {fileID: 980884662}
 --- !u!222 &1441629347
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8142,7 +8142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2db0e7722864cf4d9aac21b04372920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 980884662}
+  MainMenu: {fileID: 980884662}
 --- !u!222 &1659676794
 CanvasRenderer:
   m_ObjectHideFlags: 0

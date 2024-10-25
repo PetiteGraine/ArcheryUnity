@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class SpawnTargets : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject Target;
     private void Awake()
     {
-        Instantiate(target);
-        Instantiate(target);
-        Instantiate(target);
-        Instantiate(target);
-        Instantiate(target);
+        Instantiate(Target);
+        Instantiate(Target);
+        Instantiate(Target);
+        Instantiate(Target);
+        Instantiate(Target);
     }
 }

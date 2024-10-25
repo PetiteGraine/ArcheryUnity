@@ -3,17 +3,17 @@ using TMPro;
 using Microsoft.MixedReality.Toolkit.Experimental.UI;
 public class ShowKeyboard : MonoBehaviour
 {
-    private TMP_InputField inputField;
+    private TMP_InputField _inputField;
 
     void Start()
     {
-        inputField = GetComponent<TMP_InputField>();
-        inputField.onSelect.AddListener(x => OpenKeyboard());
+        _inputField = GetComponent<TMP_InputField>();
+        _inputField.onSelect.AddListener(x => OpenKeyboard());
     }
 
     public void OpenKeyboard()
     {
-        NonNativeKeyboard.Instance.InputField = inputField;
-        NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);
+        NonNativeKeyboard.Instance.InputField = _inputField;
+        NonNativeKeyboard.Instance.PresentKeyboard(_inputField.text);
     }
 }

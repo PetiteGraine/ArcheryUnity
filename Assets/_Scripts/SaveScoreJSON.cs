@@ -6,7 +6,6 @@ using UnityEngine;
 
 public static class SaveScoreJSON
 {
-
     public static void SaveToJSON<T>(List<T> toSave, string filename)
     {
         Debug.Log(GetPath(filename));
