@@ -13,6 +13,6 @@ A school project about an archery vr game.
 ### Credits
 Bow models by [@Quaternius](https://www.patreon.com/quaternius)
 
-Music: [Sakura Girl - Late at Night](https://soundcloud.com/sakuragirl_official)  
+Music: [Sakura Girl - Late at Night]([https://soundcloud.com/sakuragirl_official](https://soundcloud.com/sakuragirl_official/lateatnight))  
 Music promoted by [Chosic](https://www.chosic.com/free-music/all/)  
 Licence: [Creative Commons CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
