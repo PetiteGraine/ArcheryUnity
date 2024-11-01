@@ -2,7 +2,7 @@
 A school project about an archery vr game.
 
 ### Windows version
-[ArcheryUnity.zip](https://github.com/PetiteGraine/ArcheryUnity/releases/download/Demo/ArcheryUnity.zip)
+[ArcheryUnity.zip](https://github.com/PetiteGraine/ArcheryUnity/releases/download/Demo/ArcheryUnity.zip)<br>
 [ArcheryUnity.apk](https://github.com/PetiteGraine/ArcheryUnity/releases/download/Demo/ArcheryUnity.apk)
 
 ### Menu
